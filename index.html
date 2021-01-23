@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Project 78
+        </title>
+
+        <style>
+            body {
+                text-align: center;
+                background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+
+}
+
+
+            #heading {
+                color: rgb(33, 6, 65);
+                font-family: cursive;
+                text-decoration-color: rgb(243, 97, 0);
+            }
+
+            #image {
+                height:450px;
+                width:400px;
+                border-radius: 10%;
+                border-style: double;
+                border-width: 5px;
+                background-color: white;
+            }
+
+            #name {
+               color: rgb(77, 13, 102); 
+               font-weight: bold;
+               font-size: 22px;
+               font-family: cursive;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <h1 id="heading">THE FAMILY BOOK</h1>
+
+        <img id="image" 
+        src="https://images-na.ssl-images-amazon.com/images/I/91zbi9M+mKL.jpg">
+
+        <h4 id="name"></h4>
+
+        <button onclick="next()">
+            Next
+        </button>
+
+
+        <script>
+            var members= [
+                
+                "https://iv1.lisimg.com/image/15089364/310full-stanley-pamplemousse.jpg",
+                "https://lthumb.lisimg.com/363/15089363.jpg?width=411&sharpen=true",
+                "https://wallpapercave.com/wp/wp1890201.jpg"
+            ];
+            var names= [
+                "Mr. Bikash Ranjan Das",
+                "Mrs. Rooplekha Singh",
+                "Bighneshi and Rudrakshi Das"
+            ];
+            var i=0;
+            function next(){
+            document.getElementById("image").src=members[i];
+            document.getElementById("name").innerHTML=names[i];
+            if (i>4){
+            i=0;
+            }
+            else i++;
+            };
+        </script>
+    </body>
+</html>
